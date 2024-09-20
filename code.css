@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #e2e5e885;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0; 
+}
+
+.logo img {
+    max-width: 150px;
+    height: auto;
+}
+
+.container {
+    width: 80%;
+    max-width: 400px;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    justify-content: center;
+    text-align: center;
+
+}
+
+.container p {
+    font-weight: 600;
+    font-size: 1rem; /* Relative unit for better scaling */
+    margin-bottom: 0.5rem;
+}
+
+.container input {
+    width: 90%;
+    height: 40px;
+    border: 1px solid #ea49c2;
+    padding: 10px;
+    margin: 10px 0 20px;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+.container input:focus {
+    border-color: #d81455;
+}
+
+.container button {
+    width: 80%; /* Set a consistent width for the buttons */
+    height: 35px; /* Smaller height */
+    background: #d81455;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    margin: 5px auto; /* Center the button with auto margins */
+    font-weight: 500;
+    transition: background 0.3s;
+    display: block; /* Make the buttons block elements */
+}
+
+.container button:hover {
+    background: #d42a5a;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center buttons */
+}
+
+#imgbox {
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically if needed */
+    width: 90%;
+    border-radius: 5px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s;
+}
+
+#imgbox img {
+    width: 40%; /* Keep your original sizing */
+    height: auto; 
+    padding: 10px;
+}
+
+#imgbox.show-img {
+    max-height: 300px; /* Keep this for showing the image */
+    margin: 10px auto; /* Center the box */
+    border: 1px solid #d1d1d1;
+}
+
+footer {
+    margin-top: 20px;
+    padding-top:60px ;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
+
+footer p {
+    font-family: cursive;
+}
+
+footer span {
+    color: palevioletred;
+    font-family: cursive;
+}
+
+.error {
+    animation: shake 0.1s linear 10;
+    border: 4px solid #ff0000;
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-2px);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    75% {
+        transform: translateX(2px);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .logo img {
+        max-width: 200px;
+    }
+
+    .container p {
+        font-size: 0.9rem;
+    }
+
+    .container input,
+    .container button {
+        height: 40px;
+        font-size: 0.9rem;
+    }
+
+    .container {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .container {
+        padding: 10px;
+    }
+
+    .container p {
+        font-size: 0.85rem;
+    }
+
+    .container input,
+    .container button {
+        height: 30px; 
+        font-size: 0.85rem;
+    }
+}
